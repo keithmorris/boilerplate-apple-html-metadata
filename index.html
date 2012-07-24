@@ -1,0 +1,79 @@
+
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" manifest="/cache.manifest"> <!--<![endif]-->
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<title>Brown Bag</title>
+		<meta name="description" content="">
+
+		<meta name="viewport" content="width=device-width">
+
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+
+		<!-- iPhone ICON -->
+	    <link href="images/apple-images/icon-57x57.png" sizes="57x57" rel="apple-touch-icon">
+
+	    <!-- iPad ICON-->
+	    <link href="images/apple-images/icon-72x72.png" sizes="72x72" rel="apple-touch-icon">
+
+	    <!-- iPhone (Retina) ICON-->
+	    <link href="images/apple-images/icon-114x114.png" sizes="114x114" rel="apple-touch-icon">
+
+	    <!-- iPad (Retina) ICON-->
+	    <link href="images/apple-images/icon-144x144.png" sizes="144x144" rel="apple-touch-icon">
+
+	    <!-- iPhone SPLASHSCREEN-->
+	    <link href="images/apple-images/splash-320x460.png" media="(device-width: 320px)" rel="apple-touch-startup-image">
+
+	    <!-- iPhone (Retina) SPLASHSCREEN-->
+	    <link href="images/apple-images/splash-640x920.png" media="(device-width: 320px) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+
+	    <!-- iPad (portrait) SPLASHSCREEN-->
+	    <link href="images/apple-images/splash-768x1004.png" media="(device-width: 768px) and (orientation: portrait)" rel="apple-touch-startup-image">
+
+	    <!-- iPad (landscape) SPLASHSCREEN-->
+	    <link href="images/apple-images/splash-748x1024.png" media="(device-width: 768px) and (orientation: landscape)" rel="apple-touch-startup-image">
+
+	    <!-- iPad (Retina, portrait) SPLASHSCREEN-->
+	    <link href="images/apple-images/splash-1536x2008.png" media="(device-width: 1536px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+
+	    <!-- iPad (Retina, landscape) SPLASHSCREEN-->
+	    <link href="images/apple-images/splash-1496x2048.png" media="(device-width: 1536px)  and (orientation: landscape) and (-webkit-device-pixel-ratio: 2)" rel="apple-touch-startup-image">
+
+		<script type="text/javascript">
+			(function () {
+				// Check if a new cache is available on page load.
+				window.addEventListener('load', function (e) {
+
+					var appcache = window.applicationCache;
+					
+					appcache.addEventListener('updateready', function (e) {
+						if (window.applicationCache.status == window.applicationCache.UPDATEREADY) {
+							// Browser downloaded a new app cache.
+							// Swap it in and reload the page to get the new hotness.
+							window.applicationCache.swapCache();
+							if (confirm('A new version of this site is available. Load it?')) {
+								window.location.reload();
+							}
+						} else {
+							// Manifest didn't changed. Nothing new to server.
+						}
+					}, false);
+
+					// appcache.addEventListener('downloading', function (e) {
+					// 	alert('A newer version of the site is downloading. You will be notified when download is complete and ready for you to reload the page.');
+					// }, false);
+				}, false);
+			})();
+		</script>
+	</head>
+	<body>
+		<h1>Boilerplate Apple Image and applicationCache Setup</h1>
+		<p>View <code>&lt;head></code> element in source code and images in the <code>/images/apple-images/</code> directory for details.</p>
+	</body>
+</html>
